@@ -99,7 +99,6 @@ function App() {
   };
 
   const onSuggestionsFetchRequested = (value) => {
-    console.log("[APP::onSuggestionsFetchRequested] value=", value);
     setSuggestions(getSuggestions(value));
   };
 
@@ -124,7 +123,9 @@ function App() {
             inputProps={inputProps}
           />
         </div>
-        <button onClick={onClickSubmit}>Go</button>
+        <div className="rh-auto-button">
+          <button onClick={onClickSubmit}>Go</button>
+        </div>
       </div>
       <div className="rh-gif-content">
         {imageSource === "" && <div className="rh-not-found">Not Found</div>}
